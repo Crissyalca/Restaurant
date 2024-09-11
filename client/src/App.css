@@ -1,0 +1,507 @@
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: fantasy;
+  margin: 0;
+}
+.App {
+  height: 100vh;
+}
+.back {
+  text-decoration: none;
+  border: 1px solid rgb(135, 135, 135);
+  border-radius: 2px;
+  width: 58px;
+  /* border-color: buttonborder; */
+  color: rgb(54, 54, 54);
+  font-weight: 900;
+  font-size: 13px;
+  padding-top: 2px;
+  text-align: center;
+  background-color: #efefef;
+}
+/* .back-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+} */
+
+.mySlides {
+  display: none;
+}
+.carousel {
+  width: 100%;
+  vertical-align: middle;
+  z-index: 1;
+}
+.gallery {
+  box-sizing: content-box;
+  max-width: 100vw;
+  position: relative;
+  margin: auto;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 15px;
+  color: ghostwhite;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dot-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 44%;
+  z-index: 5;
+  padding-bottom: 10px;
+}
+.container-contacts h1,
+.container-contacts h2,
+.form-container h1,
+.script-menu h1 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.container-contacts {
+  padding-top: 0;
+}
+.reserv-contact {
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.container-contacts,
+.form-container {
+  display: flex;
+  /* max-width: 100vw; */
+}
+.form-container {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(100px);
+}
+
+form {
+  width: 50vw;
+  padding-left: 30px;
+  padding-right: 15px;
+}
+.prenota {
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  /* padding-right: 20px; */
+}
+
+.script-prenota {
+  /* width: 40vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.script-contacts p {
+  margin: 0 auto;
+}
+.script-contacts {
+  text-align: justify;
+  margin: auto 20px;
+  /* font-size: 15px; */
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  /* animation-name: appear;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: initial;
+  animation-delay: 0.3s; */
+}
+.container-contacts {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(100px);
+}
+.contact-title {
+  display: flex;
+  flex-direction: column;
+}
+.showPren,
+.showCont {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.tel-email ul {
+  display: inline;
+}
+.orari ul {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.greca-title {
+  width: 40vw;
+  /* margin-left: calc(50% - (40vw / 2)); */
+  margin: 0 auto;
+}
+.menu > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0;
+  font-size: 20px;
+  font-family: fantasy;
+  padding-top: 50px;
+
+  /* background: linear-gradient(
+    to right,
+    #f4b13e,
+    #ff0202,
+    #010000
+  ); Da bianco a nero su tutto il contenitore
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+}
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  /* color: white; */
+  color: inherit;
+  cursor: pointer;
+  background-color: #fbddb35a;
+  border-radius: 8px;
+}
+li a:hover {
+  font-size: 25px;
+  background-color: rgb(198, 147, 60);
+  color: #3c1d03;
+  border-radius: 10px;
+  /* transition: opacity 0.8s ease;
+  opacity: 0; */
+}
+.menu > h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 70px;
+  margin: 120px auto 0;
+  font-family: fantasy;
+  color: aliceblue;
+}
+.menu {
+  background-image: url(bk/sfondo-sfocato-del-ristorante-sfondo-sfocato-ia-generativa_861171-840.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.diviso-due {
+  display: flex;
+  justify-content: space-around;
+}
+.diviso-due div {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  /* padding-right: 20px; */
+  padding-bottom: 20px;
+  /* padding: 10px 10px 23px 0; */
+}
+
+figure {
+  margin: 0;
+  width: 50vw;
+  /* overflow: hidden; */
+  height: 100vh;
+}
+/* @keyframes appear {
+  from {
+    0% {
+      opacity: 0;
+      transform: translateY(150px);
+    }
+  }
+  to {
+    opacity: none;
+  }
+} */
+figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+#description-reserv {
+  margin-bottom: 25px;
+}
+#img-cont-prenota {
+  overflow: hidden;
+  position: relative;
+}
+.row-menu {
+  display: flex;
+  gap: 150px;
+  justify-content: space-between;
+}
+.container-dolci:last-child {
+  margin-bottom: 30px;
+}
+
+.row-menu > span {
+  margin-top: 10px;
+}
+
+.script-menu {
+  margin: 0 30px;
+}
+
+.pie-di-pagina {
+  background-color: rgb(47, 88, 115);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: antiquewhite;
+  height: 200px;
+  margin: 0;
+}
+.pie-di-pagina div {
+  /* margin: 20px 30px 30px 30px; */
+}
+
+.pie-di-pagina img {
+  margin: 20px;
+  height: 150px;
+  border-radius: 50%;
+}
+.social img,
+#google-map {
+  height: 70px;
+  margin: 0;
+  padding: 0;
+}
+.social {
+  display: flex;
+  margin-top: -20px;
+  color: antiquewhite;
+  height: 60px;
+}
+
+/* .place a {
+  position: absolute;
+  z-index: 7;
+} */
+#last-p {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.place {
+  margin: 0px 0 20px 20px;
+}
+/* #google-map {
+  z-index: 1;
+} */
+@media (max-width: 952px) {
+  /* .menu > ul {
+    padding-top: 100px;
+  }
+  .menu > h1 {
+    margin: 50px auto 0;
+  }
+  
+  .script-prenota > h1 {
+    margin-bottom: 0;
+  }
+  h4 {
+    margin-top: 0;
+  }
+  .form-container > figure > img {
+    display: none;
+  } */
+
+  .diviso-due {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .diviso-due div {
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+  /* .prenota {
+    justify-content: flex-end;
+    padding: 0;
+  } */
+  .reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 530px) {
+  * {
+    font-size: 15px;
+  }
+
+  .menu > ul {
+    padding-top: 50px;
+    padding-left: 0;
+    margin: 0;
+  }
+  li a {
+    font-size: 15px;
+  }
+  .menu > h1 {
+    margin: 10px auto 0;
+    font-size: 30px;
+  }
+  .showPren {
+    height: 100%;
+    /* height: 650px; */
+    background-image: url(bk/sfondo-sfocato-del-ristorante-sfondo-sfocato-ia-generativa_861171-840.avif),
+      linear-gradient(rgba(255, 255, 255, 0.816), rgba(255, 255, 255, 0.304));
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .showCont {
+    height: 100%;
+    /* height: 650px; */
+    background-image: url(bk/apparecchiare4.jpg),
+      linear-gradient(rgba(255, 255, 255, 0.912), rgba(255, 255, 255, 0.349));
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container-contacts,
+  .form-container {
+    display: block;
+  }
+  .diviso-due {
+    flex-direction: column;
+    gap: 0px;
+    padding: 0 25px;
+  }
+  .script-prenota {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+  .script-prenota > h1 {
+    margin-bottom: 0;
+  }
+  #description-reserv {
+    padding: 0 25px;
+  }
+  .script-contacts {
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 80%;
+    gap: 30px;
+  }
+  .script-contacts > div,
+  .script-contacts > p {
+  }
+  .diviso-due div {
+    width: 70%;
+  }
+  form {
+    width: 100%;
+    padding: 0;
+  }
+  .message {
+    padding-left: 25px;
+  }
+
+  figure > img,
+  figure {
+    display: none;
+  }
+  .pie-di-pagina img.logo-pdp {
+    height: 100px;
+  }
+  .place {
+    font-size: 15px;
+  }
+  .social img,
+  #google-map {
+    margin-top: 10px;
+    height: 40px;
+  }
+  .row-menu {
+    gap: 30px;
+  }
+}
+@media (max-height: 640px) and (min-width: 520px) {
+  .script-prenota {
+    margin-top: 15px;
+  }
+  .reserv-contact {
+    height: 610px;
+  }
+  figure > img,
+  figure {
+    height: 610px;
+  }
+}
+@media (max-height: 550px) and (max-width: 520px) {
+  .reserv-contact {
+    height: 540px;
+  }
+  .script-prenota {
+    /* margin-top: 15px; */
+  }
+  .contacts-back {
+    margin-top: -30px;
+  }
+}
